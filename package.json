@@ -1,0 +1,29 @@
+{
+  "name": "lerna-nx-cache-works",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "libs/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --scope='example-*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PizzaPartyInc/lerna-nx-cache-works.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PizzaPartyInc/lerna-nx-cache-works/issues"
+  },
+  "homepage": "https://github.com/PizzaPartyInc/lerna-nx-cache-works#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "lerna": "^6.6.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^5.0.4"
+  }
+}
