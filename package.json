@@ -8,7 +8,7 @@
     "libs/*"
   ],
   "scripts": {
-    "build": "lerna run build --scope='example-*'"
+    "build": "lerna run build --scope=\"example-*\""
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/PizzaPartyInc/lerna-nx-cache-works#readme",
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "lerna": "^6.6.2",
+    "lerna": "^8.1.7",
     "rimraf": "^3.0.2",
     "typescript": "^5.0.4"
   }

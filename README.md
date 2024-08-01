@@ -1,6 +1,6 @@
 # Description
 
-This repository showcases a working example of lerna + nx caching.
+This repository was supposed to showcase that in the latest version of lerna caching did not work, but it still does...
 
 ## Pre-requisites
 
@@ -9,7 +9,7 @@ Successfully tested with the following.
 - OS: Windows 10
 - Node: v18.15.0
 - Yarn: 1.22.19
-- Lerna: 6.6.2
+- Lerna: 8.1.7
 
 ## Reproduction steps
 
@@ -27,8 +27,8 @@ Successfully tested with the following.
   lerna notice filter including "example-*"
   lerna info filter [ 'example-*' ]
 
-      √  example-lib-2:build (2s)
-      √  example-lib-1:build (2s)
+      √  example-lib-3:build (2s)
+      √  example-lib-4:build (2s)
 
    >  Lerna (powered by Nx)   Successfully ran target build for 2 projects (3s)
 
@@ -47,8 +47,8 @@ Successfully tested with the following.
   lerna notice filter including "example-*"
   lerna info filter [ 'example-*' ]
 
-      √  example-lib-2:build  [existing outputs match the cache, left as is]
-      √  example-lib-1:build  [existing outputs match the cache, left as is]
+      √  example-lib-3:build  [existing outputs match the cache, left as is]
+      √  example-lib-4:build  [existing outputs match the cache, left as is]
 
 
    >  Lerna (powered by Nx)   Successfully ran target build for 2 projects     (61ms)
@@ -58,7 +58,7 @@ Successfully tested with the following.
   Done in 2.25s.
   ```
 
-- Adjust the `index.ts` in one of the libs, e.g. `"Hello World 2!"` -> `"Hello World 3!"`
+- Adjust the `index.ts` in one of the libs, e.g. `"Hello World 4!"` -> `"Hello World 5!"`
 - Run `yarn build` again:
 
   - Get output like this, cache is used only for unchanged lib:
@@ -71,8 +71,8 @@ Successfully tested with the following.
   lerna notice filter including "example-*"
   lerna info filter [ 'example-*' ]
 
-      √  example-lib-1:build  [existing outputs match the cache, left as is]
-      √  example-lib-2:build (2s)
+      √  example-lib-3:build  [existing outputs match the cache, left as is]
+      √  example-lib-4:build (2s)
 
    >  Lerna (powered by Nx)   Successfully ran target build for 2 projects (2s)
 

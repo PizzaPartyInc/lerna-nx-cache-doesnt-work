@@ -87,3 +87,5 @@ build
 
 # MAC custom folder attributes
 .DS_Store
+
+.nx
